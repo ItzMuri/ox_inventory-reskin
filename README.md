@@ -1,5 +1,5 @@
 # ox_inventory
- https://github.com/overextended/ox_inventory
+
  - [ox_inventory](https://github.com/overextended/ox_inventory)
 
  - ![image](https://github.com/ItzMuri/ox_inventory-reskin/assets/88394932/7db4d1e7-45a3-46c4-bac9-95896ed09aa1)
