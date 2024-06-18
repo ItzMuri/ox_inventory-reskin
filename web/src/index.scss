@@ -9,11 +9,13 @@ $secondaryColorDark: #33343f; /* durple #3 */
 
 $backgroundColor: #0c0c1100; /* durple #8 */
 
-$gridCols: 5;
-$gridRows: 5;
-$gridSize: 10.1vh;
-$gridGap: 4px;
-$containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
+$gridColsL: 5;
+$gridRowsL: 5;
+$gridColsR: 4;
+$gridRowsR: 5;
+$gridSize: 10.12vh;
+$gridGap: 0.4rem;
+$containerSize: calc(#{$gridRowsL} * #{$gridSize + 0.22vh} + #{$gridRowsL} * #{$gridGap});
 
 body {
   margin: 0;
@@ -292,10 +294,19 @@ button:active {
   }
 }
 
-.inventory-grid-container {
+.inventory-grid-container-left {
   display: grid;
   height: $containerSize;
-  grid-template-columns: repeat($gridCols, $gridSize);
+  grid-template-columns: repeat($gridColsL, $gridSize);
+  grid-auto-rows: $gridSize + 0.22vh;
+  gap: $gridGap;
+  overflow-y: scroll;
+}
+
+.inventory-grid-container-right {
+  display: grid;
+  height: $containerSize;
+  grid-template-columns: repeat($gridColsR, $gridSize);
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
   overflow-y: scroll;
