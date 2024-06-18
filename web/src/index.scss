@@ -9,13 +9,11 @@ $secondaryColorDark: #33343f; /* durple #3 */
 
 $backgroundColor: #0c0c1100; /* durple #8 */
 
-$gridColsL: 5;
-$gridRowsL: 5;
-$gridColsR: 4;
-$gridRowsR: 5;
-$gridSize: 10.12vh;
-$gridGap: 0.4rem;
-$containerSize: calc(#{$gridRowsL} * #{$gridSize + 0.22vh} + #{$gridRowsL} * #{$gridGap});
+$gridCols: 5;
+$gridRows: 5;
+$gridSize: 10.1vh;
+$gridGap: 4px;
+$containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
 body {
   margin: 0;
@@ -294,19 +292,10 @@ button:active {
   }
 }
 
-.inventory-grid-container-left {
+.inventory-grid-container {
   display: grid;
   height: $containerSize;
-  grid-template-columns: repeat($gridColsL, $gridSize);
-  grid-auto-rows: $gridSize + 0.22vh;
-  gap: $gridGap;
-  overflow-y: scroll;
-}
-
-.inventory-grid-container-right {
-  display: grid;
-  height: $containerSize;
-  grid-template-columns: repeat($gridColsR, $gridSize);
+  grid-template-columns: repeat($gridCols, $gridSize);
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
   overflow-y: scroll;
@@ -324,7 +313,7 @@ button:active {
   position: relative;
   background-size: 5.5vh;
   color: $textColor;
-  // animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   &:hover {
     box-shadow: 0.0rem 0.0rem 50px 5px #31d4a896 inset;
     border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
@@ -332,14 +321,14 @@ button:active {
   }
 }
 
-// @keyframes zoomOutAndShake {
-//     0% {
-//         transform: scale(0);
-//     }
-//     100% {
-//         transform: scale(1);
-//     }
-// }
+@keyframes zoomOutAndShake {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 .inventory-slot-label-box {
   background: rgba(110, 110, 110, 0.158);
@@ -568,15 +557,16 @@ button:active {
 }
 
 .durability-bar {
-  background: #33343f;
-  height: 3px;
+  background: #33343fc5;
+  height: 4px;
   border-radius: 0.25rem;
   overflow: hidden;
 }
 
 .weight-bar {
-  background: #33343f;
-  height: 0.8vh;
+  background: #33343f6b;
+  border: 1px solid rgba(55, 55, 55, 1);
+  height: 1.5vh;
   border-radius: 0.25rem;
   overflow: hidden;
 }
