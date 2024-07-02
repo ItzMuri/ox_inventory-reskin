@@ -1,3 +1,7 @@
+# edit of  RazerGhost
+- https://github.com/RazerGhost/ox_inventory
+
+
 # ox_inventory
 
  - [ox_inventory](https://github.com/overextended/ox_inventory)
