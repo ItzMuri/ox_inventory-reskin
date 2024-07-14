@@ -1,14 +1,3 @@
-# edit of  RazerGhost
-- https://github.com/RazerGhost/ox_inventory
-
-
-# ox_inventory
-
- - [ox_inventory](https://github.com/overextended/ox_inventory)
-
- - ![image](https://github.com/ItzMuri/ox_inventory-reskin/assets/88394932/7db4d1e7-45a3-46c4-bac9-95896ed09aa1)
-
-
 # ox_inventory
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.

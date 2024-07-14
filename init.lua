@@ -14,11 +14,11 @@ end
 
 shared = {
     resource = GetCurrentResourceName(),
-    framework = GetConvar('inventory:framework', 'qb'),
-    playerslots = GetConvarInt('inventory:slots', 60),
-    playerweight = GetConvarInt('inventory:weight', 600000),
+    framework = GetConvar('inventory:framework', 'esx'),
+    playerslots = GetConvarInt('inventory:slots', 50),
+    playerweight = GetConvarInt('inventory:weight', 30000),
     target = GetConvarInt('inventory:target', 0) == 1,
-    police = json.decode(GetConvar('inventory:police', '["police", "bcso"]')),
+    police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
 }
 
 shared.dropslots = GetConvarInt('inventory:dropslots', shared.playerslots)
@@ -77,7 +77,7 @@ else
     PlayerData = {}
     client = {
         autoreload = GetConvarInt('inventory:autoreload', 0) == 1,
-        screenblur = GetConvarInt('inventory:screenblur', 0) == 1,
+        screenblur = GetConvarInt('inventory:screenblur', 1) == 1,
         keys = json.decode(GetConvar('inventory:keys', '')) or { 'F2', 'K', 'TAB' },
         enablekeys = json.decode(GetConvar('inventory:enablekeys', '[249]')),
         aimedfiring = GetConvarInt('inventory:aimedfiring', 0) == 1,
@@ -188,7 +188,7 @@ end
 
 -- No we're not going to support qtarget any longer.
 if shared.target and GetResourceState('ox_target') ~= 'started' then
-    shared.target = true
+    shared.target = false
     warn('ox_target is not loaded - it should start before ox_inventory')
 end
 

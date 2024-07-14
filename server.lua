@@ -4,9 +4,6 @@ if GetConvar('inventory:versioncheck', 'true') == 'true' then
 	lib.versionCheck('overextended/ox_inventory')
 end
 
-require 'modules.bridge.server'
-require 'modules.pefcl.server'
-
 local TriggerEventHooks = require 'modules.hooks.server'
 local db = require 'modules.mysql.server'
 local Items = require 'modules.items.server'
@@ -14,6 +11,8 @@ local Inventory = require 'modules.inventory.server'
 
 require 'modules.crafting.server'
 require 'modules.shops.server'
+require 'modules.pefcl.server'
+require 'modules.bridge.server'
 
 ---@param player table
 ---@param data table?
@@ -236,14 +235,16 @@ end)
 ---@param playerId number
 ---@param invType string
 ---@param data string|number|table
-exports('forceOpenInventory', function(playerId, invType, data)
+function server.forceOpenInventory(playerId, invType, data)
 	local left, right = openInventory(playerId, invType, data, true)
 
 	if left and right then
 		TriggerClientEvent('ox_inventory:forceOpenInventory', playerId, left, right)
 		return right.id
 	end
-end)
+end
+
+exports('forceOpenInventory', server.forceOpenInventory)
 
 local Licenses = lib.load('data.licenses')
 
@@ -259,7 +260,7 @@ end)
 
 lib.callback.register('ox_inventory:getItemCount', function(source, item, metadata, target)
 	local inventory = target and Inventory(target) or Inventory(source)
-	return (inventory and Inventory.GetItem(inventory, item, metadata, true)) or 0
+	return (inventory and Inventory.GetItemCount(inventory, item, metadata, true))
 end)
 
 lib.callback.register('ox_inventory:getInventory', function(source, id)
