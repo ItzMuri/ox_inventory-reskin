@@ -342,8 +342,8 @@ button:active {
 }
 
 .inventory-slot-label-box {
-  background: rgba(110, 110, 110, 0.158);
-  border: 1px solid rgba(55, 55, 55, 1);
+  background: rgba(56, 56, 56, 0.747);
+  // border: 1px solid rgba(55, 55, 55, 1);
   color: $textColor;
   text-align: center;
   border-bottom-left-radius: 0.5rem;
@@ -569,15 +569,14 @@ button:active {
 
 .durability-bar {
   background: #33343fc5;
-  height: 4px;
+  height: 3px;
   border-radius: 0.25rem;
   overflow: hidden;
 }
 
 .weight-bar {
   background: #33343f6b;
-  border: 1px solid rgba(55, 55, 55, 1);
-  height: 1.5vh;
+  height: 1vh;
   border-radius: 0.25rem;
   overflow: hidden;
 }
