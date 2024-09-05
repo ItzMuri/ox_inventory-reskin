@@ -58,7 +58,7 @@ input[type='number']::-webkit-outer-spin-button {
   height: 100%;
   width: 100%;
   color: white;
-  
+
 }
 
 .context-menu-list {
@@ -161,7 +161,7 @@ button:active {
     text-align: center;
     outline: none;
     color: #fff;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.089) 0%, rgba(77, 79, 87, 0.177) 100%);
+    background: radial-gradient(circle, rgba(41, 41, 41, 0.548) 0%, rgba(77, 79, 87, 0.177) 100%);
     border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
     &:focus-within {
       background:rgba(0, 248, 185, 0.22);
@@ -314,9 +314,9 @@ button:active {
 
 // inventory slots
 .inventory-slot {
-  background: rgba(110, 110, 110, 0.158);
+  background: rgba(32, 32, 32, 0.795);
   border: 1px solid rgba(55, 55, 55, 1);
-  box-shadow: 0.0rem 0.0rem 50px 5px rgba(0, 0, 0, 0.808) inset ;
+  box-shadow: 0.0rem 0.0rem 50px 5px rgba(46, 46, 46, 0.603) inset ;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.5rem;
@@ -342,7 +342,9 @@ button:active {
 }
 
 .inventory-slot-label-box {
-  background: rgba(56, 56, 56, 0.747);
+  background: rgba(32, 32, 32, 0.795);
+  border: 1px solid rgba(55, 55, 55, 1);
+  box-shadow: 0.0rem 0.0rem 50px 5px rgba(32, 32, 32, 0.603) inset ;
   // border: 1px solid rgba(55, 55, 55, 1);
   color: $textColor;
   text-align: center;
@@ -439,8 +441,9 @@ button:active {
   min-width: 200px;
   color:white;
   font-family: $mainFont;
-  background: rgba(110, 110, 110, 0.158);
+  background: rgba(32, 32, 32, 0.795);
   border: 1px solid rgba(55, 55, 55, 1);
+  box-shadow: 0.0rem 0.0rem 50px 5px rgba(46, 46, 46, 0.603) inset ;
   p {
     font-size: 12px;
     font-weight: 400;
