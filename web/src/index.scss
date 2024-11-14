@@ -1,6 +1,6 @@
 $mainColor: #1a1d21;
 $textColor: #adadad;
-$mainFont: 'Cairo';
+$mainFont: 'Roboto';
 
 $secondaryColor: #1a1d21;
 $secondaryColorHighlight: #01b888;
@@ -132,7 +132,6 @@ button:active {
   align-items: center;
   height: 100%;
   background: radial-gradient(rgba(14, 15, 20, 0.76) 0%, rgb(10, 11, 15) 100%);
-
 }
 
 .inventory-wrapper-container {
@@ -155,43 +154,63 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 10.5rem;
+    padding-top: 6.2rem;
     justify-content: center;
     align-items: center;
   }
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 11px 8px;
-    width: 5rem;
+    padding: 6px 8px;
+    width: 4rem;
     font-family: $mainFont;
     font-size: 16px;
     text-align: center;
     outline: none;
-    color: #fff;
-    background: radial-gradient(circle, rgba(41, 41, 41, 0.548) 0%, rgba(77, 79, 87, 0.177) 100%);
-    border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
+    color: #ffffff73;
+    background-color: #1a1d21;
+    border: 1px solid #2a2d31;
+    border-bottom: 1px dashed #00ffdd54;
     &:focus-within {
-      background:rgba(0, 248, 185, 0.22);
+      box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
       border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
+      border-radius: calc(0.092592592vh * 0);
+      border-bottom: 1px dashed #00ffdd54;
     }
   }
 
   .inventory-control-button {
     font-size: 14px;
-    color: #fff;
-    background:rgba(0, 248, 185, 0.22);
-    border: calc(0.092592592vh * 1.4) solid rgba(255, 255, 255, 0.15);
-    border-radius: calc(0.092592592vh * 0);
-    transition: 200ms;
-    padding: 12px 25px;
-    text-transform: uppercase;
-    font-family: $mainFont;
+    background-color: #1a1d21;
+    border: 1px solid #2a2d31;
+    padding: 5px;
     width: 100%;
-    font-weight: 500;
+    border-bottom: 1px dashed #00ffdd54;
+
     &:hover {
-      box-shadow: 0.0rem 0.0rem 20px 5px #31d4a9 inset !important;
+      box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
       border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
+      border-radius: calc(0.092592592vh * 0);
+      border-bottom: 1px dashed #00ffdd54;
+      transform: rotateX(5deg) rotateY(10deg) rotateZ(10deg); /* 3D Rotation */
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+    }
+  }
+  .inventory-control-give {
+    font-size: 14px;
+    background-color: #1a1d21;
+    border: 1px solid #2a2d31;
+    padding: 5px;
+    width: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-bottom: 1px dashed #00ffdd54;
+    &:hover {
+      transform: rotateY(180deg); /* Flip effect on hover */
+      box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
+      border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
+      border-bottom: 1px dashed #00ffdd54;
       border-radius: calc(0.092592592vh * 0);
     }
   }
@@ -308,8 +327,8 @@ button:active {
   grid-row-gap: 0px;
   width: 30%;
   p {
-    font-size: 13px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 400;
   }
   .player-name{
     font-size: 22px;
@@ -346,7 +365,7 @@ button:active {
   border-radius: 0.3rem;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size: 5vh;
+  background-size: 7vh;
   color: $textColor;
   -webkit-box-shadow: inset 0px 0px 30px 5px rgba(16,16,18,1);
   -moz-box-shadow: inset 0px 0px 30px 5px rgba(16,16,18,1);
@@ -387,9 +406,9 @@ button:active {
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 1px;
-  font-weight: 300;
   font-family: $mainFont;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .inventory-slot-number {
@@ -411,7 +430,7 @@ button:active {
   justify-content: space-between;
   height: 100%;
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -435,7 +454,7 @@ button:active {
   padding-right:4px;
   gap: 2px;
   p {
-    font-size: 8px;
+    font-size: 13px;
   }
 }
 
@@ -537,9 +556,10 @@ button:active {
   border-radius: 5.5%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size:5vh;
+  background-size: 7vh;
   display: flex;
-  padding-bottom: 55px;
+  padding-top: 12px;
+  padding-bottom: 15px;
   padding-left: 25px;
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;

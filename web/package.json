@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@floating-ui/react": "^0.26.22",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@types/lodash": "^4.17.7",
     "@types/node": "^20.14.14",
     "@types/react": "^18.3.3",

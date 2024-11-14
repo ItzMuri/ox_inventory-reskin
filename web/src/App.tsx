@@ -37,7 +37,7 @@ debugData([
             },
             count: 5,
           },
-          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 } },
+          { slot: 2, name: 'joint', weight: 0, count: 1, metadata: { durability: 75 } },
           { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' } },
           {
             slot: 4,
@@ -57,6 +57,7 @@ debugData([
               imageurl: 'https://i.imgur.com/2xHhTTz.png',
             },
           },
+          { slot: 7, name: 'iron', weight: 0, count: 7, metadata: { durability: 75 } },
         ],
       },
       rightInventory: {
@@ -74,8 +75,8 @@ debugData([
             price: 300,
             ingredients: {
               iron: 5,
-              copper: 12,
-              powersaw: 0.1,
+              copper: 5,
+              joint: 0.1,
             },
             metadata: {
               description: 'Simple lockpick that breaks easily and can pick basic door locks',
