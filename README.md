@@ -1,5 +1,4 @@
 # ox_inventory
-![Screenshot 2024-10-04 121320](https://github.com/user-attachments/assets/108c9ac4-5c6c-4375-b8d4-2fd289239691)
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
@@ -24,7 +23,6 @@ We do not guarantee compatibility or support for third-party resources.
 - [esx](https://github.com/esx-framework/esx_core)
 - [qbox](https://github.com/Qbox-project/qbx_core)
 - [nd_core](https://github.com/ND-Framework/ND_Core)
-- [qb-core](https://github.com/qbcore-framework/qb-core) (LIMITED SUPPORT! Use qbox instead)
 
 ## ✨ Features
 

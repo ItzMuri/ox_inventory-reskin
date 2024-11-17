@@ -109,7 +109,6 @@ CreateThread(function()
 
 			shared.info('Database contains', #items, 'items.')
 		end
-
 		Wait(500)
 
 	elseif shared.framework == 'qb' then
@@ -168,23 +167,22 @@ CreateThread(function()
 
 				---@todo separate into functions for reusability, properly handle nil values
 				local itemFormat = [[
-
-	[%q] = {
-		label = %q,
-		weight = %s,
-		stack = %s,
-		close = %s,
-		description = %q,
-		client = {
-			status = {
-				hunger = %s,
-				thirst = %s,
-				stress = %s
-			},
-			image = %q,
-		}
-	},
-]]
+				[%q] = {
+					label = %q,
+					weight = %s,
+					stack = %s,
+					close = %s,
+					description = %q,
+					client = {
+						status = {
+							hunger = %s,
+							thirst = %s,
+							stress = %s
+						},
+						image = %q,
+					}
+				},
+			]]
 
 				local fileSize = #file
 
@@ -212,7 +210,7 @@ CreateThread(function()
 				shared.info('You should restart the resource to load the new items.')
 			end
 		end
-
+		
 		Wait(500)
 	end
 
