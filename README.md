@@ -5,11 +5,13 @@
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/total?logo=github)
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/overextended/ox_inventory?logo=github)
-![](https://img.shields.io/github/v/release/overextended/ox_inventory?logo=github)
+![](https://img.shields.io/github/downloads/ItzMuri/ox_inventory-reskin/total?logo=github)
+![](https://img.shields.io/github/downloads/ItzMuri/ox_inventory-reskin/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/ItzMuri/ox_inventory-reskin?logo=github)
+![](https://img.shields.io/github/v/release/ItzMuri/ox_inventory-reskin?logo=github)
 
+
+https://github.com/ItzMuri/ox_inventory-reskin
 ## 📚 Documentation
 
 https://overextended.dev/ox_inventory
