@@ -13,7 +13,7 @@ $gridColsL: 5;
 $gridRowsL: 5;
 $gridColsR: 5;
 $gridRowsR: 5;
-$gridSize: 10.12vh;
+$gridSize: 9vh;
 $gridGap: 0.4rem;
 $containerSize: calc(#{$gridRowsL} * #{$gridSize + 0.22vh} + #{$gridRowsL} * #{$gridGap});
 
@@ -78,10 +78,8 @@ input[type='number']::-webkit-outer-spin-button {
 .context-menu-item {
   padding: 9px;
   background-color: $secondaryColor;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
+  border: calc(0.092592592vh * 1.4) solid rgba(255, 255, 255, 0.15);
+  border-radius: calc(0.092592592vh * 0);
   outline: none;
   color: $textColor;
   display: flex;
@@ -154,7 +152,7 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 6.2rem;
+    padding-top: 6.6rem;
     justify-content: center;
     align-items: center;
   }
@@ -173,8 +171,7 @@ button:active {
     border-bottom: 1px dashed #00ffdd54;
     &:focus-within {
       box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
-      border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
-      border-radius: calc(0.092592592vh * 0);
+      border: 1px solid #2a2d31;
       border-bottom: 1px dashed #00ffdd54;
     }
   }
@@ -186,11 +183,8 @@ button:active {
     padding: 5px;
     width: 100%;
     border-bottom: 1px dashed #00ffdd54;
-
     &:hover {
       box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
-      border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
-      border-radius: calc(0.092592592vh * 0);
       border-bottom: 1px dashed #00ffdd54;
       transform: rotateX(5deg) rotateY(10deg) rotateZ(10deg); /* 3D Rotation */
       transform-style: preserve-3d;
@@ -209,9 +203,7 @@ button:active {
     &:hover {
       transform: rotateY(180deg); /* Flip effect on hover */
       box-shadow: 0.0rem 0.0rem 10px 2px #104d3cb7 inset !important;
-      border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
       border-bottom: 1px dashed #00ffdd54;
-      border-radius: calc(0.092592592vh * 0);
     }
   }
 }
@@ -365,12 +357,12 @@ button:active {
   border-radius: 0.3rem;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size: 7vh;
+  background-size: 5vh;
   color: $textColor;
   -webkit-box-shadow: inset 0px 0px 30px 5px rgba(16,16,18,1);
   -moz-box-shadow: inset 0px 0px 30px 5px rgba(16,16,18,1);
   box-shadow: inset 0px 0px 40px 10px rgba(16,16,18,1);
-  // animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   border-bottom: 1px dashed #00ffdd54;
   &:hover {
     -webkit-box-shadow: inset 0px 0px 30px 5px rgba(6, 43, 36, 0.336);
